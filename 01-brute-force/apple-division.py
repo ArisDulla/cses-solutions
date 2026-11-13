@@ -1,6 +1,8 @@
 
 print("\nheyy\n")
 
+# https://cses.fi/problemset/task/1623?utm_source
+
 weights = []
 groupA = []
 groupB = []
@@ -28,7 +30,10 @@ for i in range(2 ** n):
         print("-  "+str(i)+" - "+str(j))
         
         if (((i >> j) & 1) == 0 ):
-            
+        
+        # i >> j: Shift the bits to the right.
+        # & 1: Check the last bit.
+         
             groupAsum += weights[j]
             groupA.append(weights[j])
         else:
